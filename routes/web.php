@@ -14,3 +14,37 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+
+Route::get('/services', function () {
+    return view('services');
+});
+
+
+Route::get('/shop', function () {
+    return view('shop');
+});
+
+
+Route::get('/news', function () {
+    return view('news');
+});
+
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+
+Route::get('/invest', function () {
+    return view('invest');
+});
+
+
+Route::get('/contacts', function () {
+    return view('contacts');
+});
