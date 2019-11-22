@@ -11,40 +11,34 @@
 |
 */
 
+/**
+ * admin chapter
+ */
+Route::get('/dashboard', 'AdminController@index');
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('general/index');
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('general/about');
 });
-
 
 Route::get('/services', function () {
-    return view('services');
+    return view('general/services');
 });
-
-
-Route::get('/shop', function () {
-    return view('shop');
-});
-
-
-Route::get('/news', function () {
-    return view('news');
-});
-
-
-Route::get('/blog', function () {
-    return view('blog');
-});
-
 
 Route::get('/invest', function () {
-    return view('invest');
+    return view('general/invest');
 });
-
 
 Route::get('/contacts', function () {
-    return view('contacts');
+    return view('general/contacts');
 });
+
+Route::get('/shop', 'ShopController@index');
+Route::get('/news', 'NewsController@index');
+
+Route::get('/blog', 'BlogController@index');
+Route::get('/blog/{slug}', 'BlogController@view');
