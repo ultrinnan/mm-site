@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>MARICHKA Smart Bikes</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -122,7 +122,6 @@
             <a href="/services">Services</a>
             <a href="/shop">Shop</a>
             <a href="/news">News</a>
-            <a href="/blog">Blog</a>
             <a href="/invest">Invest</a>
             <a href="/contacts">Contacts</a>
         </div>

@@ -122,7 +122,6 @@
             <a href="/services">Services</a>
             <a href="/shop">Shop</a>
             <a href="/news">News</a>
-            <a href="/blog">Blog</a>
             <a href="/invest">Invest</a>
             <a href="/contacts">Contacts</a>
         </div>

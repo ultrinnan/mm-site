@@ -10,6 +10,6 @@
     <title>Document</title>
 </head>
 <body>
-    {{ $post->text }}
+    {{ $singleNews->text }}
 </body>
 </html>
