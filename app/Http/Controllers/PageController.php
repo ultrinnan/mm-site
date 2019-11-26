@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Page;
-use Illuminate\Http\Request;
-
 class PageController extends Controller
 {
-    public function view($slug)
+    /**
+     * Display all the static pages when authenticated
+     *
+     * @param string $page
+     * @return \Illuminate\View\View
+     */
+    public function index(string $page)
     {
-        $page = Page::where('slug', $slug)->firstOrFail();
-
-        return view('general/page', [
-            'page' => $page,
-        ]);
+        if (view()->exists("pages.{$page}")) {
+            return view("pages.{$page}");
+        }
+        return abort(404);
     }
 }
