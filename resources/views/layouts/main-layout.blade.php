@@ -90,6 +90,10 @@
             font-size: 10px;
             opacity: 0.5;
         }
+        .footer_copy a {
+            margin: 0 8px;
+        }
+
     </style>
 </head>
 <body>
@@ -97,7 +101,7 @@
     @yield('content')
 
     <div class="footer_copy">
-        Copyright <?= date('Y') ?> &copy; FEDIRKO.PRO. All rights reserved.
+        Copyright <?= date('Y') ?> &copy; <a href="https://fedirko.pro">FEDIRKO.PRO</a> All rights reserved.
     </div>
 </body>
 </html>

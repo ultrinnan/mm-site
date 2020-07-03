@@ -26,12 +26,13 @@
 
 
             <div class="links">
-                <a href="/about">About</a>
-                <a href="/services">Services</a>
-                <a href="/shop">Shop</a>
-                <a href="/news">News</a>
-                <a href="/invest">Invest</a>
-                <a href="/contacts">Contacts</a>
+                <a href="/">More info coming soon</a>
+{{--                <a href="/about">About</a>--}}
+{{--                <a href="/services">Services</a>--}}
+{{--                <a href="/shop">Shop</a>--}}
+{{--                <a href="/news">News</a>--}}
+{{--                <a href="/invest">Invest</a>--}}
+{{--                <a href="/contacts">Contacts</a>--}}
             </div>
         </div>
     </div>
