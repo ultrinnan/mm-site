@@ -1,0 +1,45 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.search {
+  .search_input {
+    background: transparent;
+    width: 190px;
+    border-bottom: 1px solid #ccc;
+    color: #ccc;
+    position: relative;
+    top: -2px;
+  }
+  .search_button {
+    content: '';
+    width: 18px;
+    height: 18px;
+    top: 0;
+    right: 0;
+    background-image: url(image-url('/icons/magnifier-search.svg'));
+    background-color: transparent;
+    background-repeat: no-repeat;
+  }
+}
+
+.search_page {
+  &.head {
+    background: url(image-url('/bg/news.jpg')) center no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1440px) { // max-width: 1440px
+}
+
+@media screen and (max-width: 1024px) { // max-width: 1024px
+}
+
+@media screen and (max-width: 768px) { // max-width: 768px
+}
+
+@media screen and (max-width: 590px) { // max-width: 590px
+}
+
+@media screen and (max-width: 320px) { // max-width: 320px
+}

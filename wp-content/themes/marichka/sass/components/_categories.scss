@@ -1,0 +1,355 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.categories {
+  h2 {
+    font-family: $arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    color: $black;
+    text-align: center;
+    margin-bottom: 43px;
+  }
+  &.head {
+    background: url(image-url('/bg/news.jpg')) center no-repeat;
+    background-size: cover;
+  }
+
+  .post_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .post {
+      width: 540px;
+      display: flex;
+      flex-direction: row;
+      background: $lightgrey;
+      margin-bottom: 50px;
+      padding: 39px 0 38px;
+      color: $black;
+      min-height: 327px;
+      transition: all 0.3s;
+      .preview_img {
+        width: 255px;
+        min-width: 255px;
+        margin-right: 50px;
+        height: 100%;
+      }
+      .preview_description {
+        position: relative;
+        padding: 12px 20px 60px 1px;
+        .post_date {
+          font-family: $arial;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          padding: 0 0 0 30px;
+          position: relative;
+          margin-bottom: 31px;
+          &:before {
+            display: block;
+            content: '';
+            background: url(image-url('/icons/calendar.svg')) 0 center no-repeat;
+            background-size: cover;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+        .post_title {
+          font-family: $arial;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 21px;
+        }
+        .post_read_more {
+          position: absolute;
+          bottom: 12px;
+          .btn {
+            font-size: 14px;
+            line-height: 16px;
+            padding: 12px 30px;
+            display: inline-block;
+          }
+        }
+      }
+      &.first {
+        width: 100%;
+        margin-bottom: 74px;
+        padding: 0;
+        min-height: 444px;
+        .preview_img {
+          width: 570px;
+          min-width: 570px;
+        }
+        .preview_description {
+          padding: 51px 50px 100px 2px;
+          .post_date {
+            font-size: 16px;
+            line-height: 18px;
+            padding: 0 0 0 30px;
+            margin-bottom: 50px;
+          }
+          .post_title {
+            font-size: 32px;
+            line-height: 37px;
+          }
+          .post_read_more {
+            bottom: 50px;
+            .btn {
+              font-size: 16px;
+              line-height: 18px;
+            }
+          }
+        }
+      }
+      &:hover {
+        background: #11447E;
+        color: white;
+        .preview_description {
+          .post_date {
+            &:before {
+              display: block;
+              content: '';
+              background: url(image-url('/icons/calendar_white.svg')) 0 center no-repeat;
+              background-size: cover;
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+      }
+      &.front {
+        padding: 0;
+        margin: 0;
+        width: 350px;
+        min-height: 270px;
+        .preview_description {
+          width: 350px;
+          min-height: 270px;
+          padding: 30px 30px 75px;
+          .post_date {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            color: $white;
+            &:before {
+              display: block;
+              content: '';
+              background: url(image-url('/icons/calendar_white.svg')) 0 center no-repeat;
+              background-size: cover;
+              width: 16px;
+              height: 16px;
+            }
+          }
+          .post_title {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 18px;
+            color: $white;
+          }
+          .post_read_more {
+            bottom: 30px;
+          }
+        }
+
+      }
+    }
+  }
+
+  &.single {
+    .container {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      .social_share {
+        display: flex;
+        flex-direction: column;
+        width: 104px;
+        min-width: 104px;
+        padding-top: 56px;
+        .social_share_box {
+          position: sticky;
+          top: 150px;
+        }
+      }
+      .content {
+        width: 915px;
+        .date {
+          font-family: $arial;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          padding: 0 0 0 30px;
+          position: relative;
+          margin-bottom: 45px;
+          &:before {
+            display: block;
+            content: '';
+            background: url(image-url('/icons/calendar.svg')) 0 center no-repeat;
+            background-size: cover;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+        .article {
+          font-size: 16px;
+          line-height: 18.4px;
+          color: $black;
+          &:after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+          h2 {
+            font-family: $arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 37px;
+            color: $black;
+            margin-bottom: 20px;
+            text-align: left;
+          }
+
+        }
+      }
+    }
+    .latest_post {
+      width: 100%;
+      h3 {
+        font-family: $arial;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        color: $black;
+        margin-bottom: 50px;
+      }
+      .post {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .right_link {
+    margin: 30px 0 0;
+    text-align: right;
+    display: block;
+  }
+  .all_post {
+    display: inline-block;
+    font-family: $arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    color: $black;
+    position: relative;
+    padding-right: 50px;
+    &:after {
+      background: url(image-url('/icons/arrow.svg')) 0 center no-repeat;
+      width: 31px;
+      height: 8px;
+      background-size: cover;
+      display: block;
+      content: '';
+      position: absolute;
+      top: 30%;
+      right: 0;
+    }
+    &:hover {
+      &:after {
+        background: url(image-url('/icons/arrow_blue.svg')) 0 center no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1440px) { // max-width: 1440px
+}
+
+@media screen and (max-width: 1024px) { // max-width: 1024px
+//}
+//
+//@media screen and (max-width: 768px) { // max-width: 768px
+//}
+//
+//@media screen and (max-width: 590px) { // max-width: 590px
+  .categories {
+    .post_box {
+      .post,
+      .post.first {
+        padding: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        position: relative;
+        min-height: 250px;
+        .preview_img {
+          width: 100%;
+          max-width: 100%;
+          min-width: 100%;
+          min-height: 250px;
+          position: absolute;
+          margin: 0;
+          top: 0;
+          left: 0;
+          &:before {
+            position: absolute;
+            content: '';
+            display: block;
+            background: url(image-url('/dark_gradient.svg')) center no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+          }
+        }
+        .preview_description {
+          width: 100%;
+          padding: 40px 40px 100px;
+          color: $white;
+          text-shadow: #0b215c 0 0 10px;
+          .post_date {
+            margin-bottom: 35px;
+            &:before {
+              display: block;
+              content: '';
+              background: rgba(0, 0, 0, 0.3) url(image-url('/icons/calendar_white.svg')) 0 center no-repeat;
+              background-size: cover;
+              width: 16px;
+              height: 16px;
+              box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px;
+            }
+          }
+          .post_title {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 18px;
+          }
+          .post_read_more {
+            bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) { // max-width: 320px
+}

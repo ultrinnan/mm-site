@@ -1,0 +1,72 @@
+@import 'variables';
+
+// width
+@mixin r($width) {
+  @media only screen and (max-width: $width+ 'px') {
+    @content;
+  }
+}
+
+// font-family
+@mixin addFont($alias, $name, $weight, $style) {
+  @font-face {
+    font-family: $alias;
+    src: local($name),
+      url('../fonts/' + $name + '.ttf') format('ttf');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@mixin reset-link($color: $white) {
+  color: $color;
+  text-decoration: none;
+}
+
+@mixin font-style($size: 16px, $height: 20px, $weight: normal, $slyle: normal) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  font-style: $slyle;
+}
+
+@mixin filter-gray() {
+  filter: grayscale(100%);
+  transition: all 1s;
+  cursor: pointer;
+
+  &:hover {
+    filter: none;
+  }
+}
+
+@mixin grid-cell($colorBgr, $colorBox) {
+  border-radius: 14px;
+  background-color: $colorBgr;
+  box-shadow: 14px -2px 40px $colorBox;
+}
+
+@mixin slider($width, $height) {
+  position: relative;
+  max-width: $width;
+  max-height: $height;
+  height: $height;
+}
+
+@mixin hover {
+  background-image: linear-gradient(267.49deg, #19D7CF 4.21%, #3F95FC 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin active {
+  background-image: linear-gradient(267.49deg, #00D3CC 4.21%, #0074FF 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@function image-url($url) {
+  @return $images-path + $url;
+}

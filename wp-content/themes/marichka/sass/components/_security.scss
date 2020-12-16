@@ -1,0 +1,417 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.security_audit {
+  background: #0B1019 url(image-url('/bg/security_bg.jpg')) top center no-repeat;
+  background-size: initial;
+  min-height: 550px;
+  position: relative;
+  h2 {
+    font-family: $arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 43px;
+    position: relative;
+  }
+  .security_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .left_hexes {
+      width: 25%;
+      max-width: 25%;
+      display: flex;
+      flex-direction: column;
+      padding-right: 24px;
+      .item {
+        justify-content: flex-end;
+        align-items: center;
+        .title {
+          order: 1;
+          padding: 0 20px 0 0;
+          text-align: right;
+        }
+        .hex {
+          order: 2;
+        }
+      }
+    }
+    .right_hexes {
+      width: 25%;
+      max-width: 25%;
+      display: flex;
+      flex-direction: column;
+      //padding-left: 23px; //initial
+      padding-left: 15px; //opened
+      .item {
+        justify-content: flex-start;
+        align-items: center;
+        .title {
+          order: 2;
+          padding: 0 0 0 20px;
+          text-align: left;
+          text-shadow: #0b215c 0 0 10px;
+        }
+        .hex {
+          order: 1;
+        }
+      }
+    }
+    .center_info {
+      max-width: 30%;
+      width: 320px;
+      min-width: 320px;
+      height: 320px;
+      background: linear-gradient(267.49deg, #19D7CF 4.21%, #3F95FC 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: 23px;
+      left: -7px;
+      margin: 0 100px;
+      .info {
+        display: none;
+        text-align: center;
+        width: 260px;
+        min-width: 260px;
+        height: 260px;
+        background: #F2F2F2;
+        border-radius: 50%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        color: $black;
+        overflow: hidden;
+        padding: 50px 30px;
+        &.active {
+          display: block;      
+        }
+        a {
+           @include active;
+        }  
+        a:hover {
+          @include hover;
+          text-decoration: underline;
+          text-decoration-color:#3F95FC;
+       }  
+      }
+    }
+    .item {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      margin-bottom: -32px;
+      &.active,
+      &:hover {
+        .title {
+          text-shadow: none;
+          @include hover;
+        }
+        .hex {
+          background: url(image-url('/icons/hex_big_hover.svg')) center no-repeat;
+          background-size: contain;
+          width: 103px;
+          height: 119px;
+          margin: 0;
+        }
+      }
+      &.active {
+        .title {
+          color: $white;
+          -webkit-text-fill-color: initial;
+          text-shadow: #0b215c 0 0 10px;
+        }
+      }
+      &:nth-child(even) {
+        margin-right: -50px;
+      }
+      &:nth-child(odd) {
+        margin-left: -50px;
+      }
+      .title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 18px;
+        color: $white;
+      }
+      .hex {
+        width: 103px;
+        height: 119px;
+        min-width: 103px;
+        margin: 0;
+        .audit_icon {
+          display: block;
+          margin: auto;
+          width: 60%;
+          height: 100%;
+          position: relative;
+          &:before,
+          &:after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            display: block;
+            top: 50%;
+          }
+          &:after {
+            background: #F2F2F2;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+          }
+          &.cloud {
+            background: url(image-url('/icons/audit/cloud.svg')) center 40% no-repeat;
+            background-size: contain;
+            &:before {
+              background: url(image-url('/icons/audit/cloud-line.svg')) center no-repeat;
+              background-size: contain;
+              width: 147px;
+              height: 64px;
+              left: 81px;
+            }
+            &:after {
+              left: 223px;
+              top: 119px;
+            }
+          }
+          &.iot {
+            background: url(image-url('/icons/audit/iot.svg')) center no-repeat;
+            background-size: contain;
+            &:before {
+              background: url(image-url('/icons/audit/iot-line.svg')) center no-repeat;
+              background-size: contain;
+              width: 87px;
+              height: 3px;
+              left: 80px;
+            }
+            &:after {
+              left: 163px;
+              top: 57px;
+            }
+          }
+          &.crime {
+            background: url(image-url('/icons/audit/crime.svg')) center no-repeat;
+            background-size: contain;
+            &:before {
+              background: url(image-url('/icons/audit/crime-line.svg')) center no-repeat;
+              background-size: contain;
+              width: 125px;
+              height: 27px;
+              left: 81px;
+              top: 30%;
+            }
+            &:after {
+              left: 204px;
+              top: 31px;
+            }
+          }
+          &.red {
+            background: url(image-url('/icons/audit/red.svg')) center 45% no-repeat;
+            background-size: contain;
+            &:before {
+              background: url(image-url('/icons/audit/red-line.svg')) center no-repeat;
+              background-size: contain;
+              width: 90px;
+              height: 47px;
+              top: 13%;
+              left: 81px;
+            }
+            &:after {
+              left: 168px;
+              top: 9px;
+            }
+          }
+          &.standard {
+            background: url(image-url('/icons/audit/standard.svg')) center no-repeat;
+            background-size: contain;
+            &:before {
+              background: url(image-url('/icons/audit/standard-line.svg')) center no-repeat;
+              background-size: contain;
+              width: 100px;
+              height: 64px;
+              left: -118px;
+            }
+            &:after {
+              left: -124px;
+              top: 121px;
+            }
+          }
+          &.pentest {
+            background: url(image-url('/icons/audit/pentest.svg')) center no-repeat;
+            background-size: contain;
+            &:before {
+              background: url(image-url('/icons/audit/pentest-line.svg')) center no-repeat;
+              background-size: contain;
+              width: 133px;
+              height: 2px;
+              left: -152px;
+            }
+            &:after {
+              left: -159px;
+              top: 57px;
+            }
+          }
+          &.code {
+            background: url(image-url('/icons/audit/code.svg')) center no-repeat;
+            background-size: contain;
+            &:before {
+              background: url(image-url('/icons/audit/code-line.svg')) 0 0 no-repeat;
+              background-size: auto;
+              width: 83px;
+              height: 27px;
+              top: 30%;
+              left: -102px;
+            }
+            &:after {
+              left: -108px;
+              top: 31px;
+            }
+          }
+          &.config {
+            background: url(image-url('/icons/audit/config.svg')) center no-repeat;
+            background-size: contain;
+            &:before {
+              background: url(image-url('/icons/audit/config-line.svg')) center no-repeat;
+              background-size: contain;
+              width: 138px;
+              height: 47px;
+              top: 13%;
+              left: -157px;
+            }
+            &:after {
+              left: -162px;
+              top: 9px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 1440px) { // max-width: 1440px
+  .security_audit {
+    .security_box {
+      .center_info {
+        margin: 0 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) { // max-width: 1024px
+//}
+//
+//@media screen and (max-width: 768px) { // max-width: 768px
+//}
+//
+//@media screen and (max-width: 590px) { // max-width: 590px
+  .security_audit {
+    background: #0B1019 url(image-url('/bg/security_bg_mobile.jpg')) right center no-repeat;
+    background-size: cover;
+    &:before {
+      content: '';
+      background: linear-gradient(89.97deg, #01A7F3 0.02%, rgba(255, 255, 255, 0) 99.97%), linear-gradient(180deg, #6389BB 0%, rgba(99, 137, 187, 0) 52.43%, #6389BB 100%);
+      opacity: 0.5;
+    }
+    .container {
+      padding-bottom: 25px;
+      h2 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      .security_box {
+        flex-direction: column;
+        .left_hexes,
+        .right_hexes {
+          width: 100%;
+          max-width: 100%;
+          padding: 0;
+          .item {
+            width: 80%;
+            margin: 0 auto 30px !important;
+            justify-content: flex-start;
+            align-items: center;
+            .title {
+              order: 2;
+              padding: 0 0 0 45px;
+              text-align: left;
+            }
+            .hex {
+              order: 1;
+              background: none;
+              width: 50px;
+              height: 50px;
+              min-width: 50px;
+              .audit_icon {
+                margin: 0;
+                width: 100%;
+                &.cloud {
+                  background: url(image-url('/icons/audit/cloud-blue.svg')) center no-repeat;
+                  background-size: contain;
+                }
+                &.iot {
+                  background: url(image-url('/icons/audit/iot-blue.svg')) center no-repeat;
+                  background-size: contain;
+                }
+                &.crime {
+                  background: url(image-url('/icons/audit/crime-blue.svg')) center no-repeat;
+                  background-size: contain;
+                }
+                &.red {
+                  background: url(image-url('/icons/audit/red-blue.svg')) center no-repeat;
+                  background-size: contain;
+                }
+                &.standard {
+                  background: url(image-url('/icons/audit/standard-blue.svg')) center no-repeat;
+                  background-size: contain;
+                }
+                &.pentest {
+                  background: url(image-url('/icons/audit/pentest-blue.svg')) center no-repeat;
+                  background-size: contain;
+                }
+                &.code {
+                  background: url(image-url('/icons/audit/code-blue.svg')) center no-repeat;
+                  background-size: contain;
+                }
+                &.config {
+                  background: url(image-url('/icons/audit/config-blue.svg')) center no-repeat;
+                  background-size: contain;
+                }
+                &:before,
+                &:after {
+                  background: none;
+                }
+              }
+            }
+            &.active {
+              .title {
+                color: $white;
+                -webkit-text-fill-color: initial;
+              }
+            }
+          }
+        }
+        .center_info {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) { // max-width: 320px
+}
