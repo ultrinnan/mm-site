@@ -20,17 +20,17 @@ $result = get_option('social_options');
 
         <div class="form-group">
             <label for="linkedin">LinkedIn link:</label>
-            <input type="url" class="form-control" id="linkedin" name="linkedin" value="<?=$result['linkedin']?>">
+            <input type="url" class="form-control" id="linkedin" name="linkedin" value="<?=$result['linkedin']??null?>">
         </div>
 
         <div class="form-group">
             <label for="facebook">Facebook link:</label>
-            <input type="url" class="form-control" id="facebook" name="facebook" value="<?=$result['facebook']?>">
+            <input type="url" class="form-control" id="facebook" name="facebook" value="<?=$result['facebook']??null?>">
         </div>
 
         <div class="form-group">
             <label for="instagram">Instagram link:</label>
-            <input type="url" class="form-control" id="instagram" name="instagram" value="<?=$result['instagram']?>">
+            <input type="url" class="form-control" id="instagram" name="instagram" value="<?=$result['instagram']??null?>">
         </div>
 
         <p class="submit">
