@@ -41,7 +41,7 @@ jQuery(document).ready(function($) {
             }
         } else {
             e.preventDefault();
-            $('body').addClass('modal_lock');
+            $('body').addClass('lock');
             $('.top').removeClass('active');
             $(this).addClass('active');
             $('#close_menu').addClass('active');
@@ -68,17 +68,17 @@ jQuery(document).ready(function($) {
         $('.top').removeClass('active');
         $('.header_menu').removeClass('active');
         $('.hamburger').removeClass('hidden_smooth');
-        $('body').removeClass('modal_lock');
+        $('body').removeClass('lock');
     });
 
     $('.dont_panic .btn').on('click', function (e) {
-        $('body').addClass('modal_lock');
+        $('body').addClass('lock');
         $('.modal_box').removeClass('hidden');
         $('.modal_box .modal_main').removeClass('hidden');
     });
 
     $('.close_modal, .modal_box, .modal_box .modal_check_success').on('click', function(e) {
-        $('body').removeClass('modal_lock');
+        $('body').removeClass('lock');
         $('.modal_box, .header .modal_main, .modal_box .modal_main, .modal_box .modal_thanks').addClass('hidden');
     });
 
@@ -275,13 +275,13 @@ jQuery(document).ready(function($) {
 
     $('.hamburger').on('click', function () {
         $(this).addClass('hidden_smooth');
-        $('body').addClass('modal_lock');
+        $('body').addClass('lock');
         $('.header_menu').addClass('active');
         $('#close_menu').addClass('active');
     });
     $('.header_menu').on('click', function () {
         $(this).removeClass('active');
-        $('body').removeClass('modal_lock');
+        $('body').removeClass('lock');
         $('.hamburger').removeClass('hidden_smooth');
     });
     $('.header_menu .menu_list').on('click', function (e) {

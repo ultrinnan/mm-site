@@ -1,138 +1,29 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
-.header {
+header {
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
-  color: #F2F2F2;
   transition: all 0.3s;
   &.frontpage {
-    .header_row,
-    .header_menu {
-      background: transparent;
-    }
+    //maybe different
   }
   &.small {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     .header_row {
-      background: #0B205D;
-      padding: 3px 70px;
-      transition: all 0.3s;
-      .header_content {
-        .dont_panic {
-          button {
-            padding: 9px 30px;
-            transition: all 0.3s;
-          }
-        }
-      }
-    }
-    .header_menu {
-      background: #11447E;
       transition: all 0.3s;
     }
   }
-  a {
-    text-decoration: none;
-    color: #F2F2F2;
-    &:hover {
-      @include hover;
-    }
-  }
-  .header_row {
-    background: #0B205D;
-    padding: 12px 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s;
-    a {
-      font-style: normal;
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 14px;
-      &:hover {
-        @include hover;
-      }
-    }
-
+  .container {
+    padding: 16px 0;
     .header_logo {
-      img {
-        width: 80px;
-        margin: 1px 0 0 8px;
-      }
-    }
-
-    .header_content {
-      display: flex;
-      align-items: center;
-
-      .header_search {
-        position: relative;
-      }
-      .header_contacts {
-        margin: 0 30px;
-
-      }
-      .header_phone {
-
-      }
-      .header_languages {
-        margin: 0 30px;
-        .languages_icon {
-          content: '';
-          background-image: url(image-url('/icons/globe.svg'));
-          background-repeat: no-repeat;
-          background-size: contain;
-          width: 18px;
-          min-width: 18px;
-          height: 18px;
-          float: left;
-          margin-right: 5px;
-        }
-        .languages {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-        }
-        .languages__item,
-        .lang-item {
-          cursor: pointer;
-          list-style: none;
-          margin: 0 5px;
-          position: relative;
-          top: -1px;
-          a {
-            font-family: 'Roboto Condensed', sans-serif;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 10px;
-            line-height: 14px;
-            text-transform: uppercase;
-            &:hover {
-              @include hover;
-            }
-          }
-          &.current-lang {
-            a {
-              @include hover;
-            }
-          }
+      a {
+        display: block;
+        img {
+          max-height: 50px;
         }
       }
-    }
-    .hamburger {
-      display: none;
-    }
-  }
-  .header_menu {
-    background: #11447E;
-    transition: all 0.3s;
-    padding: 19px 78px;
-    .mobile_menu_header,
-    .mobile_menu_footer {
-      display: none;
     }
   }
 }
@@ -141,48 +32,12 @@
 }
 
 @media screen and (max-width: 1024px) { // max-width: 1024px
-//}
-//
-//@media screen and (max-width: 768px) { // max-width: 768px
-//}
-//
-//@media screen and (max-width: 590px) { // max-width: 590px
-  .header {
-    &.small {
-      .header_row {
-        padding: 13px 21px 12px 16px;
-      }
-    }
-    .header_row {
-      padding: 13px 21px 12px 16px;
-      background: transparent;
-      .header_content {
-        display: none;
-      }
-      .hamburger {
-        display: block;
-        opacity: 1;
-        transition: all 0.3s;
-        span {
-          display: block;
-          width: 32px;
-          height: 2px;
-          border-radius: 2px;
-          margin: 8px 0;
-          background: $white;
-          &:first-of-type,
-          &:last-of-type {
-            height: 4px;
-            margin: 0;
-          }
-        }
-        &.hidden_smooth {
-          transition: all 0.3s;
-          opacity: 0;
-        }
-      }
-    }
-  }
+}
+
+@media screen and (max-width: 768px) { // max-width: 768px
+}
+
+@media screen and (max-width: 590px) { // max-width: 590px
 }
 
 @media screen and (max-width: 320px) { // max-width: 320px
