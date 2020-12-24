@@ -3,7 +3,7 @@ add_filter('widget_text','do_shortcode');
 
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
-add_theme_support( 'html5', array( 'search-form' ) );
+add_theme_support( 'html5', [ 'search-form', 'script', 'style' ] );
 
 //security hooks
 require 'admin/security_hooks.php';

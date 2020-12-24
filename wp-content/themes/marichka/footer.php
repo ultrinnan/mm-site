@@ -39,8 +39,6 @@ if(!isset($_COOKIE['cookieAccepted']) && is_active_sidebar( 'cookie_consent' ) )
     <?php
 }
 ?>
-<html>
-<body>
 
 <?php wp_footer(); ?>
 
