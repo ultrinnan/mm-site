@@ -10,39 +10,30 @@ if ($bg) {
 	$style = '';
 }
 ?>
-    <section class="section head news page" <?=$style;?>>
-        <h1><?php the_title(); ?></h1>
-    </section>
-
-    <section class="section breadcrumbs">
-		<?php
-		if(function_exists('bcn_display')) {
-			bcn_display();
-		}
-		?>
-    </section>
-
-    <section class="section news single page">
+    <section class="section head page" <?=$style;?>>
         <div class="container">
-            <div class="social_share">
-				<?php
-				get_template_part( 'partials/social-share-page' );
-				?>
-            </div>
+            <h1><?php the_title(); ?></h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
             <div class="content">
-                <div class="date">
-					<?php echo get_the_date('d/m/Y'); ?>
-                </div>
-                <div class="article">
-					<?php if (have_posts()): while (have_posts()): the_post(); ?>
-						<?php the_content(); ?>
-					<?php endwhile; endif; ?>
-                </div>
+                <?php if (have_posts()): while (have_posts()): the_post(); ?>
+                    <?php the_content(); ?>
+                <?php endwhile; endif; ?>
             </div>
         </div>
 	    <?php
 	    get_template_part( 'partials/tags' );
 	    ?>
+        <div class="container">
+            <div class="social_share">
+                <?php
+                //get_template_part( 'partials/social-share-page' );
+                ?>
+            </div>
+        </div>
     </section>
 
 <?php get_footer(); ?>

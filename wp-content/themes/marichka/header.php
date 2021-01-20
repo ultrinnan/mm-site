@@ -19,9 +19,22 @@
     <header class="<?=is_front_page()?'frontpage':'';?>">
         <div class="container">
             <div class="header_logo">
-                <a href="<?=home_url();?>">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/marichka-logo.svg" alt="Marichka Motors logo" />
-                </a>
+                <a href="<?=home_url();?>" title="Marichka Motors"></a>
+            </div>
+            <div class="header_menu">
+                <?php wp_nav_menu([
+                    'theme_location' => 'header',
+                    'container' => false,
+                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                    'menu_class' => 'menu_list'
+                ]);?>
+                <div class="languages">
+                    <?
+                    if ( is_active_sidebar( 'languages' ) ) {
+                        dynamic_sidebar( 'languages' );
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </header>

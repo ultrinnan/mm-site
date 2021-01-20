@@ -1,13 +1,14 @@
 {
   "name": "marichka",
   "version": "1.0.0",
-  "description": "",
+  "description": "Marichka Motors main site",
+  "repository": "https://github.com/ultrinnan/marichka_motors",
   "main": "./src/index.html",
   "scripts": {
     "start": "gulp",
     "dev": "gulp development"
   },
-  "author": "",
+  "author": "FEDIRKO.PRO",
   "license": "ISC",
   "dependencies": {
     "gulp-cli": "^2.0.1"

@@ -11,16 +11,16 @@ body {
   position: relative;
   background: url(image-url('/bg/black-leather.jpg')) center no-repeat;
   background-size: cover;
+  background: $white;
+  color: $black;
   &.modal_lock {
     overflow: hidden;
   }
-  color: $gold;
 }
 
 main {
   position: relative;
-  min-height: calc(100vh - 100px);
-  padding: 1px;
+  min-height: calc(100vh - 190px);
 }
 
 h1,
@@ -45,19 +45,7 @@ h4 {
 
 .section {
   &.head {
-    padding: 8px;
-    background: url(image-url('/bg/black-leather.jpg')) center no-repeat;
-    background-size: cover;
-  }
-  &.hero {
-    .container {
-      margin: 30vh auto;
-      h1,
-      h2 {
-        display: block;
-        text-align: center;
-      }
-    }
+    padding: 16px 0;
   }
 }
 
@@ -66,6 +54,17 @@ h4 {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0;
+
+  .content {
+    line-height: 1.5;
+
+    p {
+      margin-bottom: 16px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .hidden {

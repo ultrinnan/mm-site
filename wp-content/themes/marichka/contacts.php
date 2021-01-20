@@ -10,31 +10,20 @@ if ($bg) {
 	$style = '';
 }
 ?>
-    <section class="section head contact page" <?=$style;?>>
-        <h1><?php the_title(); ?></h1>
+    <section class="section head contacts page" <?=$style;?>>
+        <div class="container">
+            <h1><?php the_title(); ?></h1>
+        </div>
     </section>
 
-    <section class="section breadcrumbs">
-		<?php
-		if(function_exists('bcn_display')) {
-			bcn_display();
-		}
-		?>
-    </section>
-
-    <section class="section contact page">
+    <section class="section contacts page">
         <div class="container">
             <div class="content">
-                <div class="article">
-					<?php if (have_posts()): while (have_posts()): the_post(); ?>
-						<?php the_content(); ?>
-					<?php endwhile; endif; ?>
-                </div>
+                <?php if (have_posts()): while (have_posts()): the_post(); ?>
+                    <?php the_content(); ?>
+                <?php endwhile; endif; ?>
             </div>
         </div>
-		<?php
-		get_template_part( 'partials/tags' );
-		?>
     </section>
 
 <?php get_footer(); ?>

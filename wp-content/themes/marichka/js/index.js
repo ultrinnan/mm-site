@@ -10,18 +10,6 @@ window.addEventListener('resize', () => {
 });
 
 jQuery(document).ready(function($) {
-    const body = $('dody');
-
-    function header_change(){
-        if ($(window).scrollTop() < 20){
-            $('header').removeClass("small");
-        }
-        else{
-            $('header').addClass("small");
-        }
-    }
-    header_change();
-
     function fillServiceForm() {
         if ($('.services.single h1')) {
             let title = $('.services.single h1').text();
@@ -29,10 +17,6 @@ jQuery(document).ready(function($) {
         }
     }
     fillServiceForm();
-
-    $(window).scroll(function() {
-        header_change();
-    });
 
     $('.top').on('click', function(e) {
         if ($(this).hasClass('active')) {

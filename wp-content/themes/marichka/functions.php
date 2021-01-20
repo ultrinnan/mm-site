@@ -46,6 +46,13 @@ register_sidebar(array(
 	'before_widget' => '',
 	'after_widget' => '',
 ));
+// create widget for languages
+register_sidebar(array(
+	'name' => 'Language switcher',
+	'id' => 'languages',
+	'before_widget' => '',
+	'after_widget' => '',
+));
 
 //theme translations
 if (function_exists('pll_register_string')) {
