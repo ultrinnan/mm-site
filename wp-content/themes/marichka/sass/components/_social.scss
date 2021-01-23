@@ -1,76 +1,41 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
-.social_box{
-  .hex {
-    display: inline-block;
-    background: url(image-url('/icons/hex.svg')) center no-repeat;
-    background-size: contain;
-    width: 50px;
-    min-width: 50px;
-    height: 50px;
-    margin: 0 -8px -3px -5px;
-    &.big {
-      background: url(image-url('/icons/hex_big.svg')) center no-repeat;
-      background-size: contain;
-      width: 99px;
-      min-width: 99px;
-      height: 115px;
-      margin: 0 -1px;
-      &:hover {
-        background: url(image-url('/icons/hex_big_hover.svg')) center no-repeat;
-        background-size: contain;
-        width: 103px;
-        height: 119px;
-        margin: -2px -3px 0;
-      }
-    }
-    &:hover {
-      background: url(image-url('/icons/hex_hover.svg')) center no-repeat;
-      margin: 0 -7px -3px -6px;
-    }
-    &.solid {
-      background: url(image-url('/icons/hex_solid.svg')) center no-repeat;
-      margin: 0 0 -7px 0;
-      &:hover {
-        background: url(image-url('/icons/hex_solid.svg')) center no-repeat;
-        .social {
-          background-position: center;
-        }
-      }
-    }
-  }
-}
-
-.social {
-  display: block;
-  width: 98%;
-  height: 50px;
-  &.linkedin {
-    background: url(image-url('/icons/linkedin.svg')) center no-repeat;
-    &:hover {
-      background-position: 18px center;
-    }
-  }
-  &.facebook {
-    background: url(image-url('/icons/facebook.svg')) center no-repeat;
-    &:hover {
-      background-position: 20px center;
-    }
-  }
-  &.instagram {
-    background: url(image-url('/icons/instagram.svg')) center no-repeat;
-    &:hover {
-      background-position: 17px center;
-    }
-  }
-  &.clutch {
-    background: url(image-url('/icons/clutch.png')) center no-repeat;
-    background-size: contain;
-    width: 39px;
+.footer_social {
+  display: flex;
+  align-items: center;
+  .social {
+    display: block;
+    width: 42px;
     height: 42px;
-    margin-left: 57px;
+    margin: 0 8px;
+    border-radius: 50%;
+    &:hover {
+      -webkit-box-shadow: 0 0 10px $yellow;
+      box-shadow: 0 0 10px $yellow;
+    }
+    &.linkedin {
+      background: url(image-url('/icons/social/linkedin.svg')) center no-repeat;
+      background-size: contain;
+    }
+    &.facebook {
+      background: url(image-url('/icons/social/facebook.svg')) center no-repeat;
+      background-size: contain;
+    }
+    &.youtube {
+      background: url(image-url('/icons/social/youtube.svg')) center no-repeat;
+      background-size: contain;
+    }
+    &.twitter {
+      background: url(image-url('/icons/social/twitter.svg')) center no-repeat;
+      background-size: contain;
+    }
+    &.instagram {
+      background: url(image-url('/icons/social/instagram.svg')) center no-repeat;
+      background-size: contain;
+    }
   }
+
 }
 
 .social_share {

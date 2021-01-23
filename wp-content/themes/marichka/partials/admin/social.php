@@ -13,7 +13,7 @@ $result = get_option('social_options');
 
 //todo: dynamic fields
 ?>
-<div class="wrap">
+<div class="wrap admin_custom">
     <h1 class="wp-heading-inline">Social settings</h1>
 
     <form method="POST">
@@ -29,8 +29,18 @@ $result = get_option('social_options');
         </div>
 
         <div class="form-group">
+            <label for="twitter">Twitter link:</label>
+            <input type="url" class="form-control" id="twitter" name="twitter" value="<?=$result['twitter']??null?>">
+        </div>
+
+        <div class="form-group">
             <label for="instagram">Instagram link:</label>
             <input type="url" class="form-control" id="instagram" name="instagram" value="<?=$result['instagram']??null?>">
+        </div>
+
+        <div class="form-group">
+            <label for="youttube">Youtube link:</label>
+            <input type="url" class="form-control" id="youtube" name="youtube" value="<?=$result['youtube']??null?>">
         </div>
 
         <p class="submit">

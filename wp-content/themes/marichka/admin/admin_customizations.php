@@ -27,7 +27,7 @@ add_filter( 'login_headerurl', function(){
 });
 
 /* remove from logo "works on wordpress" */
-add_filter( 'login_headertitle', function() {
+add_filter( 'login_headertext', function() {
     return false;
 });
  

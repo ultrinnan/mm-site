@@ -56,7 +56,7 @@ register_sidebar(array(
 
 //theme translations
 if (function_exists('pll_register_string')) {
-	pll_register_string( 'watch_all_cases', 'watch_all_cases', 'template', false );
+//	pll_register_string( 'follow us', 'follow us', 'template', false );
 }
 
 //Feedback custom post type

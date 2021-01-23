@@ -9,8 +9,6 @@ body {
   font-family: $arial;
   cursor: default;
   position: relative;
-  background: url(image-url('/bg/black-leather.jpg')) center no-repeat;
-  background-size: cover;
   background: $white;
   color: $black;
   &.modal_lock {
@@ -84,6 +82,13 @@ h4 {
 .slick-track {
   display: flex;
   align-items: center;
+}
+
+.hero {
+  background: url(image-url('/listen-to-nature.jpg')) center no-repeat;
+  background-size: cover;
+  height: calc(100vh - 190px);
+  min-height: 450px;
 }
 
 #wpadminbar {

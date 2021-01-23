@@ -10,20 +10,32 @@ $email = isset($options['email']) ? $options['email'] : '';
         <?php wp_nav_menu([
             'theme_location' => 'footer',
             'container' => false,
-            'menu_class' => 'right_menu'
+            'menu_class' => 'footer_menu'
         ]);?>
     </div>
     <div class="container">
         <div class="copyright">
             <div>
-                &copy; Marichka Motors - Smart Electric Motorcycles
+                <?=date('Y');?> &copy; Marichka Motors - Smart Electric Motorcycles
             </div>
             <div>
                 Created by <a target="_blank" class="footer_author" href="https://fedirko.pro">FEDIRKO.PRO</a>
             </div>
         </div>
         <div class="footer_social">
-            <?php get_template_part( 'partials/footer_social' );?>
+            <?php
+            $social = get_option('social_options');
+
+            if ($social) {
+                foreach ($social as $key => $value) {
+                    if ($value) {
+                        ?>
+                            <a class="social <?=$key?>" href="<?=$value?>" target="_blank" title="<?=$key?>"></a>
+                        <?php
+                    }
+                }
+            }
+            ?>
         </div>
     </div>
 </footer>
