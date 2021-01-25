@@ -54,5 +54,16 @@ if(!isset($_COOKIE['cookieAccepted']) && is_active_sidebar( 'cookie_consent' ) )
 
 <?php wp_footer(); ?>
 
+<?php
+if (defined('WP_DEBUG') && WP_DEBUG === true) {
+    //snippet for brpwsersync from gulp
+    ?>
+    <script id="__bs_script__">//<![CDATA[
+        document.write("<script async src='http://HOST:81/browser-sync/browser-sync-client.js?v=2.26.13'><\/script>".replace("HOST", location.hostname));
+        //]]></script>
+    <?php
+}
+?>
+
 </body>
 </html>

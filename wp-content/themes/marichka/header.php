@@ -21,6 +21,11 @@
             <div class="header_logo">
                 <a href="<?=home_url();?>" title="Marichka Motors"></a>
             </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="header_menu">
                 <?php wp_nav_menu([
                     'theme_location' => 'header',

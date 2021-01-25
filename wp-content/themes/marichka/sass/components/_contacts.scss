@@ -5,6 +5,7 @@
 
   .wpcf7 {
     padding: 32px 0;
+    text-align: center;
 
     input[type=text],
     input[type=email],
@@ -53,7 +54,14 @@
 }
 
 @media screen and (max-width: 590px) { // max-width: 590px
-}
-
-@media screen and (max-width: 320px) { // max-width: 320px
+  .contacts {
+    .wpcf7 {
+      input[type=text],
+      input[type=email],
+      input[type=tel],
+      textarea {
+        width: 100%;
+      }
+    }
+  }
 }

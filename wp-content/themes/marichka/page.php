@@ -27,13 +27,13 @@ if ($bg) {
 	    <?php
 	    get_template_part( 'partials/tags' );
 	    ?>
-        <div class="container">
-            <div class="social_share">
-                <?php
-                //get_template_part( 'partials/social-share-page' );
-                ?>
-            </div>
-        </div>
+<!--        <div class="container">-->
+<!--            <div class="social_share">-->
+<!--                --><?php
+//                //get_template_part( 'partials/social-share-page' );
+//                ?>
+<!--            </div>-->
+<!--        </div>-->
     </section>
 
 <?php get_footer(); ?>

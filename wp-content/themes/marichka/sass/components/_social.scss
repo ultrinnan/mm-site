@@ -38,23 +38,6 @@
 
 }
 
-.social_share {
-  display: flex;
-  flex-direction: column;
-  width: 104px;
-  min-width: 104px;
-  padding-top: 56px;
-  .social_share_box {
-    position: sticky;
-    top: 150px;
-    .hex {
-      &:hover {
-        background: url(image-url('/icons/hex_hover_color.svg')) center no-repeat;
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 1440px) { // max-width: 1440px
 }
 
@@ -65,7 +48,7 @@
 }
 
 @media screen and (max-width: 590px) { // max-width: 590px
-}
-
-@media screen and (max-width: 320px) { // max-width: 320px
+  .footer_social {
+    margin-bottom: 16px;
+  }
 }

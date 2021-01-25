@@ -12,6 +12,15 @@ $hero_video = get_field('hero_video');
 $certLink = get_field('certificates_link');
 ?>
 
-<section class="section hero" <?=$style;?>></section>
+<section class="section hero" <?=$style;?>>
+    <div class="container">
+        <div class="title">
+            <span></span>Listen to nature. </span><span>Not engine.</span>
+        </div>
+        <div class="subtitle">
+            Ride electric.
+        </div>
+    </div>
+</section>
 
 <?php get_footer(); ?>

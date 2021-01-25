@@ -2,7 +2,7 @@
 @import '../helpers/mixins';
 
 footer {
-  height: 100px;
+  min-height: 100px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -63,7 +63,15 @@ footer {
 }
 
 @media screen and (max-width: 590px) { // max-width: 590px
-}
+  footer {
+    color: $gold;
+    .container {
+      flex-direction: column-reverse;
+      align-items: center;
 
-@media screen and (max-width: 320px) { // max-width: 320px
+      .copyright {
+        text-align: center;
+      }
+    }
+  }
 }

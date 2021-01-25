@@ -10,15 +10,17 @@ get_header();
 
 <section class="section error404">
     <div class="container">
-        <div class="icon404"></div>
-
+        <h1>404</h1>
         <h2><?=pll__('404_header');?></h2>
-
-	    <?php
-	    if ( is_active_sidebar( 'page404' ) ) {
-		    dynamic_sidebar( 'page404' );
-	    }
-	    ?>
+    </div>
+</section>
+<section class="section error404">
+    <div class="container">
+        <?php
+        if ( is_active_sidebar( 'page404' ) ) {
+            dynamic_sidebar( 'page404' );
+        }
+        ?>
     </div>
 </section>
 
