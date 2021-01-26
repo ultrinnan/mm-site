@@ -14,8 +14,10 @@ $certLink = get_field('certificates_link');
 
 <section class="section hero" <?=$style;?>>
     <div class="container">
+        <h2 class="hidden">Marichka Motors</h2>
         <div class="title">
-            <span></span>Listen to nature. </span><span>Not engine.</span>
+            <span>Listen to nature. </span>
+            <span>Not engine.</span>
         </div>
         <div class="subtitle">
             Ride electric.
