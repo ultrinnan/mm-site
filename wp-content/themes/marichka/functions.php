@@ -53,6 +53,13 @@ register_sidebar(array(
 	'before_widget' => '',
 	'after_widget' => '',
 ));
+// create widget for cookie
+register_sidebar(array(
+	'name' => 'Cookie consent',
+	'id' => 'cookie_consent',
+	'before_widget' => '',
+	'after_widget' => '',
+));
 
 //theme translations
 if (function_exists('pll_register_string')) {
