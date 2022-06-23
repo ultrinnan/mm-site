@@ -9,6 +9,8 @@ Thumbs.db
 #mac
 .DS_Store
 
+/db_data
+
 /readme.html
 /index.php
 /wp-activate.php
